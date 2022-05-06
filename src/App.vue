@@ -30,6 +30,8 @@ export default defineComponent({
    --card-background: #f3f3f3;
    --input-background: #e6e6e6;
    --button-background: #00032a;
+   --button-background-contrast: #00032a;
+   --button-text-contrast: white;
    --text-main: #080a3e;
    --text-dark: #00032a;
    --header-icon: #05074b;
@@ -44,6 +46,8 @@ export default defineComponent({
    --card-background: #080a3e;
    --input-background: #00032a;
    --button-background: #00032a;
+   --button-background-contrast: white;
+   --button-text-contrast: #080a3e;
    --text-main: #ffffff;
    --text-dark: #ffffff;
    --button-text: #ffffff;
@@ -65,6 +69,9 @@ export default defineComponent({
 }
 .justify-center {
    justify-content: center;
+}
+.justify-end {
+   justify-content: end;
 }
 .w-100 {
    width: 100%;
@@ -124,5 +131,41 @@ body {
 * {
    margin: 0;
    box-sizing: border-box;
+}
+body {
+   font-family: "Kanit";
+}
+
+.card-wrapper {
+   margin-top: 9.375rem;
+   margin-bottom: 9.375rem;
+   padding: 5rem 6.9375rem 8.125rem;
+   background: var(--card-background);
+   font-family: Kanit;
+   font-size: inherit;
+   font-weight: 500;
+   max-width: 62.5rem;
+   width: 70%;
+   border-radius: 1.375rem;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   -moz-box-pack: start;
+   justify-content: flex-start;
+}
+.page-wrapper {
+   width: 100%;
+   font-family: Kanit;
+   font-size: inherit;
+   font-weight: 500;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: flex-start;
+}
+.card-title {
+   font-weight: 600;
+   font-size: 36px;
+   color: var(--text-main);
 }
 </style>

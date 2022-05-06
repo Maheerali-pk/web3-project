@@ -53,8 +53,8 @@ import Footer from "../components/Footer.vue";
 .card-button {
    background: #080a3e;
    border-radius: 219px;
-   color: var(--button-text);
-   background: var(--button-background);
+   color: var(--button-text-contrast);
+   background: var(--button-background-contrast);
    font-weight: 600;
    size: 0.925rem;
    padding: 0.7rem 2rem;
