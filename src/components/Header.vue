@@ -6,10 +6,10 @@
          <img src="../assets/Images/header-logo.png" />
          <div class="menu">
             <div>Home</div>
-            <div>Swap</div>
-            <div>Governance</div>
+            <div @click="$router.push('/swap')">Swap</div>
+            <div @click="$router.push('/governance')">Governance</div>
             <div>Fiat-on-ramp</div>
-            <div>Farming</div>
+            <div @click="$router.push('/farming')">Farming</div>
          </div>
       </div>
       <div class="header-right">

@@ -97,23 +97,7 @@ import Footer from "../components/Footer.vue";
    font-size: 0.75rem;
    color: var(--text-main);
 }
-.card-wrapper {
-   margin-top: 9.375rem;
-   margin-bottom: 9.375rem;
-   padding: 5rem 6.9375rem 8.125rem;
-   background: var(--card-background);
-   font-family: Kanit;
-   font-size: inherit;
-   font-weight: 500;
-   max-width: 62.5rem;
-   width: 70%;
-   border-radius: 1.375rem;
-   display: flex;
-   flex-direction: column;
-   align-items: flex-start;
-   -moz-box-pack: start;
-   justify-content: flex-start;
-}
+
 .page-wrapper {
    width: 100%;
    font-family: Kanit;

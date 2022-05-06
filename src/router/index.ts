@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
 import Governance from "../views/Governance.vue";
 import Swap from "../views/Swap.vue";
+import Farming from "../views/Farming.vue";
 
 const routes: Array<RouteRecordRaw> = [
    {
@@ -12,6 +13,11 @@ const routes: Array<RouteRecordRaw> = [
       path: "/swap",
       name: "swap",
       component: Swap,
+   },
+   {
+      path: "/farming",
+      name: "farming",
+      component: Farming,
    },
 ];
 
