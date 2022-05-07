@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import InfoPopup from "./InfoPopup.vue";
+</script>
 
 <template>
    <div class="header">
@@ -8,7 +10,7 @@
             <div>Home</div>
             <div @click="$router.push('/swap')">Swap</div>
             <div @click="$router.push('/governance')">Governance</div>
-            <div>Fiat-on-ramp</div>
+            <div @click="$router.push('/fiat-on-ramp')">Fiat-on-ramp</div>
             <div @click="$router.push('/farming')">Farming</div>
          </div>
       </div>
@@ -64,7 +66,11 @@
                </defs>
             </svg>
          </div>
-         <div class="icon-wrapper">
+         <div
+            @click.stop="$store.commit('toggleInformationPopup')"
+            v-if="$store.state.isConnected"
+            class="icon-wrapper user-icon"
+         >
             <svg
                style="height: 2.5rem; width: 2.5rem"
                width="40"
@@ -79,7 +85,9 @@
                   fill="#080A3E"
                ></path>
             </svg>
+            <InfoPopup @click.stop="('')" v-if="$store.state.showInformationPopup"></InfoPopup>
          </div>
+         <button @click="$store.commit('toggleWalletPopup')" v-else class="button">Connect Wallet</button>
       </div>
    </div>
 </template>
@@ -156,5 +164,21 @@
    .icon {
       fill: var(--header-icon);
    }
+   &.user-icon {
+      position: relative;
+   }
+}
+button {
+   background: #080a3e;
+   border-radius: 219px;
+   color: var(--button-text-contrast);
+   background: var(--button-background-contrast);
+   font-weight: 600;
+   size: 0.925rem;
+   padding: 0.7rem 2rem;
+   outline: none;
+   border: none;
+   cursor: pointer;
+   white-space: nowrap;
 }
 </style>

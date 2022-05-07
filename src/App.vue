@@ -2,9 +2,10 @@
 import { storeKey } from "vuex";
 import Governance from "./views/Governance.vue";
 
+import { ethers } from "ethers";
 import { defineComponent, VueElement } from "vue";
 import store from "./store/store";
-
+import WalletPopup from "./components/WalletPopup.vue";
 export default defineComponent({
    name: "App",
    computed: {
@@ -15,12 +16,14 @@ export default defineComponent({
          set() {},
       },
    },
+   components: { WalletPopup },
 });
 </script>
 
 <template>
    <div class="app" :class="{ light: $store.state.theme === 'light', dark: $store.state.theme === 'dark' }">
       <router-view />
+      <WalletPopup v-if="$store.state.showWalletPopup"></WalletPopup>
    </div>
 </template>
 
@@ -110,7 +113,13 @@ w-fit {
 .f-36 {
    font-size: 2.25rem;
 }
+.text-main {
+   color: var(--text-main);
+}
 
+.light {
+   font-weight: 300;
+}
 .regular {
    font-weight: 400;
 }
