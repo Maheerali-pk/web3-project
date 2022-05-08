@@ -152,6 +152,7 @@ input {
    font-style: italic;
 }
 button {
+   font-family: "Kanit";
    color: white;
    border-radius: 4px;
    background-color: #080a3e;
