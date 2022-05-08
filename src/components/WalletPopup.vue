@@ -24,7 +24,7 @@ export default defineComponent({
 });
 </script>
 <template>
-   <div class="popup-wrapper">
+   <div class="popup-wrapper" id="wallet-popup">
       <div class="card-title">Connect Wallet</div>
       <br />
       <div class="paragraph">

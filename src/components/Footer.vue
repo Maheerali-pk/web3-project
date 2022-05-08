@@ -3,7 +3,7 @@
 <template>
    <div class="footer">
       <div class="left">
-         <img class="icon" src="../assets/Images/header-logo.png" />
+         <img class="icon" src="../assets/Images/footer-icons/footer-icon-main.png" />
          <div class="paragraph">
             Ibiza Token is a Web3 ecosystem that counts on the utility token $IBZ, the NFT marketplace, and the IbizaPay
             mobile application and aims to turn Ibiza into a “crypto island” benchmark by connecting local businesses
@@ -12,7 +12,7 @@
          </div>
       </div>
       <div class="right">
-         <div class="follow-us">Follow Us</div>
+         <div class="follow-us f-13">Follow Us</div>
          <div v-if="$store.state.theme == 'light'" class="icons">
             <img src="../assets/Images/footer-icons/Vector-0.png" />
             <img src="../assets/Images/footer-icons/Vector-1.png" />
@@ -34,7 +34,7 @@
             <img src="../assets/Images/footer-icons-dark/Vector-6.png" />
             <img src="../assets/Images/footer-icons-dark/Vector-7.png" />
          </div>
-         <div class="subscribe-text">Subscribe to the newsletter</div>
+         <div class="subscribe-text f-13">Subscribe to the newsletter</div>
          <div class="email-wrap">
             <input type="text" placeholder="Email" />
             <button>Subscribe</button>
@@ -43,7 +43,7 @@
    </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .footer {
    width: 100%;
    padding-bottom: 7rem;
@@ -84,17 +84,16 @@
    width: fit-content;
 }
 .icon {
-   height: 4.0625rem;
-   width: 4.0625rem;
    object-fit: cover;
+   transform: translateX(-1rem);
 }
 .paragraph {
    font-size: 0.6875rem;
-   font-weight: 500;
+   font-weight: 400;
    color: var(--text-main);
 }
 .follow-us {
-   margin-bottom: 0.9375rem;
+   margin-bottom: 0.8125rem;
    font-family: Kanit;
    font-weight: 500;
    color: var(--text-main);
@@ -119,7 +118,6 @@
 .subscribe-text {
    margin-bottom: 0.9375rem;
    font-family: Kanit;
-   font-size: 0.8125rem;
    font-weight: 500;
    color: var(--text-main);
 }
@@ -151,6 +149,7 @@ input {
    font-size: 0.625rem;
    border-radius: 0.25rem;
    border: none;
+   font-style: italic;
 }
 button {
    color: white;

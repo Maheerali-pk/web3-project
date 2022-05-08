@@ -1,6 +1,8 @@
-<script setup lang="ts">
+<script lang="ts">
 import Header from "../components/Header.vue";
 import Footer from "../components/Footer.vue";
+import { defineComponent } from "vue";
+export default defineComponent({ methods: { onClickMax: () => console.log("Max clicked") }, components: { Header } });
 </script>
 <template>
    <div class="page-wrapper">
@@ -17,7 +19,7 @@ import Footer from "../components/Footer.vue";
                <input class="input" placeholder="0" />
             </div>
          </div>
-         <div class="max">Max</div>
+         <div class="max cursor-pointer" @click="onClickMax">Max</div>
          <div class="icons-row">
             <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                <path
@@ -98,12 +100,12 @@ import Footer from "../components/Footer.vue";
    border-radius: 219px;
    color: var(--button-text);
    background: var(--button-background);
+   border: none;
    border: 1px solid #e20267;
    font-weight: 600;
    font-size: 1.25rem;
    padding: 0.7rem 2rem;
    outline: none;
-   border: none;
    cursor: pointer;
    margin-top: 5.5rem;
 }

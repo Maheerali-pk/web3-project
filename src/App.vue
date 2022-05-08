@@ -6,6 +6,7 @@ import { ethers } from "ethers";
 import { defineComponent, VueElement } from "vue";
 import store from "./store/store";
 import WalletPopup from "./components/WalletPopup.vue";
+import { connect } from "http2";
 export default defineComponent({
    name: "App",
    computed: {
@@ -16,6 +17,24 @@ export default defineComponent({
          set() {},
       },
    },
+   setup: () => {
+      window.addEventListener("click", (e: MouseEvent) => {
+         e.stopPropagation();
+         const tar = e.target as HTMLElement;
+         const infoPopup = document.querySelector("#info-popup") || false;
+         const walletPopup = document.querySelector("#wallet-popup") || false;
+         const connectWallet = document.querySelector(".connect-wallet") || false;
+         const userIcon = document.querySelector(".user-icon");
+         console.log(walletPopup, connectWallet, tar);
+         if (!(walletPopup && walletPopup.contains(tar)) && !(connectWallet && connectWallet.contains(tar))) {
+            store.state.showWalletPopup = false;
+         }
+         if (!(infoPopup && infoPopup.contains(tar)) && !(userIcon && userIcon.contains(tar))) {
+            store.state.showInformationPopup = false;
+         }
+      });
+   },
+   methods: {},
    components: { WalletPopup },
 });
 </script>
@@ -115,6 +134,9 @@ w-fit {
 }
 .text-main {
    color: var(--text-main);
+}
+.cursor-pointer {
+   cursor: pointer;
 }
 
 .light {

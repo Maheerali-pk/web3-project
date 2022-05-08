@@ -65,7 +65,6 @@ import Footer from "../components/Footer.vue";
    font-size: 1.25rem;
    padding: 0.7rem 2rem;
    outline: none;
-   border: none;
    cursor: pointer;
 }
 

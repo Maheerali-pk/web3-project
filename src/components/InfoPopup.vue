@@ -4,7 +4,7 @@ import { defineComponent } from "vue";
 export default defineComponent({});
 </script>
 <template>
-   <div class="popup-wrapper">
+   <div class="popup-wrapper" id="info-popup">
       <div class="popup-header">
          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -70,7 +70,7 @@ export default defineComponent({});
    align-items: flex-start;
    justify-content: flex-start;
    position: absolute;
-   width: 15rem;
+   width: 12.625rem;
    box-shadow: 2px 2px 28px rgba(0, 0, 0);
    top: 0;
    left: 0;

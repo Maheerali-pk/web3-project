@@ -1,12 +1,21 @@
-<script setup lang="ts">
+<script lang="ts">
 import Header from "../components/Header.vue";
 import Footer from "../components/Footer.vue";
+import { defineComponent } from "vue";
+export default defineComponent({
+   methods: {
+      onClickMax: () => {
+         console.log("Max clicked");
+      },
+   },
+   components: { Header },
+});
 </script>
 <template>
    <div class="page-wrapper">
       <Header></Header>
       <div class="card-wrapper">
-         <div class="card-title">Governance</div>
+         <div class="card-title">Farming</div>
          <div class="paragraph">
             Staking your LP tokens (WMATIC - IBZ on quickswap) and get reward from liquidity mining program. When you
             deposit LP token, you get IBZF token and your rewards will start growing.
@@ -19,7 +28,7 @@ import Footer from "../components/Footer.vue";
                <input placeholder="0" class="input" />
                <div>
                   <div>Your LP: 0</div>
-                  <div>Max</div>
+                  <div class="cursor-pointer" @click="onClickMax">Max</div>
                </div>
             </div>
             <button class="card-button">Approve LP</button>
@@ -81,11 +90,11 @@ import Footer from "../components/Footer.vue";
    border-radius: 219px;
    color: var(--button-text);
    background: var(--button-background);
+   border: 1px solid #e20267;
    font-weight: 600;
    size: 0.925rem;
    padding: 0.7rem 0;
    outline: none;
-   border: none;
    cursor: pointer;
    height: fit-content;
    white-space: nowrap;
