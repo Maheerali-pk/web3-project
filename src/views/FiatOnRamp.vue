@@ -7,7 +7,7 @@ import Footer from "../components/Footer.vue";
       <Header></Header>
       <div class="card-wrapper">
          <div class="card-title">Fiat On-Ramp</div>
-         <div class="subheading">Select currency and payment method</div>
+         <div class="subheading">Select Currency And Payment Method</div>
          <div class="input-label">Currency</div>
          <div class="inputs">
             <input class="input" />

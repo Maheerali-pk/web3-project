@@ -88,7 +88,7 @@ import InfoPopup from "./InfoPopup.vue";
             <InfoPopup @click.stop="('')" v-if="$store.state.showInformationPopup"></InfoPopup>
          </div>
          <button @click="$store.commit('toggleWalletPopup')" v-else class="button connect-wallet">
-            Connect Wallet
+            CONNECT WALLET
          </button>
       </div>
    </div>

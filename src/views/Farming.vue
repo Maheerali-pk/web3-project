@@ -8,7 +8,7 @@ export default defineComponent({
          console.log("Max clicked");
       },
    },
-   components: { Header },
+   components: { Header, Footer },
 });
 </script>
 <template>
@@ -38,7 +38,7 @@ export default defineComponent({
                <input placeholder="0" class="input" />
                <div>
                   <div>Your IBZF: 0</div>
-                  <div>Max</div>
+                  <div @click="onClickMax" class="cursor-pointer">Max</div>
                </div>
             </div>
             <button class="card-button">Approve IBZF</button>

@@ -34,7 +34,7 @@
             <img src="../assets/Images/footer-icons-dark/Vector-6.png" />
             <img src="../assets/Images/footer-icons-dark/Vector-7.png" />
          </div>
-         <div class="subscribe-text f-13">Subscribe to the newsletter</div>
+         <div class="subscribe-text f-13">Subscribe To The Newsletter</div>
          <div class="email-wrap">
             <input type="text" placeholder="Email" />
             <button>Subscribe</button>

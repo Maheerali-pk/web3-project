@@ -80,8 +80,15 @@ export default defineComponent({
 .app {
    height: 100%;
    width: 100%;
-   background: var(--background-main);
+   background-color: var(--background-main);
+   background-size: contain;
+   background-image: url("./assets/background.png");
+   background-position-y: 15rem;
+   background-repeat: no-repeat;
    transition: all 0.15s ease-in-out;
+}
+.light {
+   background-image: url("./assets/background-light.png");
 }
 .d-flex {
    display: flex;

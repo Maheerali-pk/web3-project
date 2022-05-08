@@ -29,6 +29,7 @@ export default defineComponent({});
       <div class="f-14 medium text-main">Valerio_Pini</div>
       <div class="f-11 light text-main">BALANCE</div>
       <div class="f-12 semibold text-main">{{ $store.state.balance }} ETH</div>
+      <div class="f-12 semibold text-main">238.128,182394 Ibz</div>
       <div
          class="f-11 light text-main"
          @click="

@@ -13,7 +13,7 @@ import Footer from "../components/Footer.vue";
          <div class="proposals">Proposals</div>
          <div class="inputs">
             <div class="input-wrapper">
-               <div class="input-label">Description</div>
+               <div class="input-label desc-label">Description</div>
                <input class="input" />
             </div>
             <div class="input-wrapper">
@@ -73,7 +73,7 @@ import Footer from "../components/Footer.vue";
 }
 .inputs {
    display: grid;
-   grid-template-columns: auto 5rem 5rem 5rem 5rem;
+   grid-template-columns: auto 5rem 10rem 10rem 5rem;
    gap: 1rem;
 
    width: 100%;
@@ -98,6 +98,9 @@ import Footer from "../components/Footer.vue";
    font-weight: 400;
    font-size: 0.75rem;
    color: var(--text-main);
+   &:not(.desc-label) {
+      padding-left: 0.25rem;
+   }
 }
 
 .page-wrapper {

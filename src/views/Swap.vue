@@ -2,7 +2,10 @@
 import Header from "../components/Header.vue";
 import Footer from "../components/Footer.vue";
 import { defineComponent } from "vue";
-export default defineComponent({ methods: { onClickMax: () => console.log("Max clicked") }, components: { Header } });
+export default defineComponent({
+   methods: { onClickMax: () => console.log("Max clicked") },
+   components: { Header, Footer },
+});
 </script>
 <template>
    <div class="page-wrapper">
@@ -39,7 +42,7 @@ export default defineComponent({ methods: { onClickMax: () => console.log("Max c
                   />
                   <path d="M12 6H10V10H6V12H10V16H12V12H16V10H12V6Z" fill="#080A3E" />
                </svg>
-               <div class="add-a-send">Add a send (optional)</div>
+               <div class="add-a-send">Add A Send (Optional)</div>
             </div>
          </div>
          <div class="inputs">
