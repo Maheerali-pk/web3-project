@@ -25,7 +25,7 @@ import Footer from "../components/Footer.vue";
          </div>
          <div class="card-footer">
             <div>exchange rate</div>
-            <div class="badge">1ESDC = 1,023 EUR</div>
+            <div class="badge">1USDC = 1,023 EUR</div>
             <div>you will get</div>
             <div class="badge">234 USDC</div>
          </div>
