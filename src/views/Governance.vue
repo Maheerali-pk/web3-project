@@ -8,7 +8,7 @@ import Footer from "../components/Footer.vue";
       <div class="card-wrapper">
          <div class="card-header">
             <div class="card-title">Governance</div>
-            <button class="card-button">Create Now</button>
+            <button class="card-button">Create New</button>
          </div>
          <div class="proposals">Proposals</div>
          <div class="inputs">
