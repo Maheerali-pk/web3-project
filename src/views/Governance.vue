@@ -56,7 +56,7 @@ import Footer from "../components/Footer.vue";
    color: var(--button-text-contrast);
    background: var(--button-background-contrast);
    font-weight: 600;
-   size: 0.9375rem;
+   font-size: 0.9375rem;
    padding: 0.55rem 1.1rem;
    height: fit-content;
    transform: translateY(1.5rem);
