@@ -10,7 +10,10 @@ import Footer from "../components/Footer.vue";
          <div class="subheading">Select Currency And Payment Method</div>
          <div class="input-label">Currency</div>
          <div class="inputs">
-            <input class="input" />
+            <select>
+               <option value="USD">USD</option>
+               <option value="EUR">EUR</option>
+            </select>
             <input placeholder="0" class="input" />
          </div>
          <div class="purchase-details subheading">Purchase Details</div>
@@ -75,7 +78,8 @@ import Footer from "../components/Footer.vue";
    width: 100%;
 }
 
-.input {
+.input,
+select {
    background-color: var(--input-background);
    color: var(--text-main);
    font-size: 0.925rem;

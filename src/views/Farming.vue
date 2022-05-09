@@ -61,7 +61,11 @@ export default defineComponent({
 }
 .paragraph {
    margin-bottom: 6rem;
+   width: 39.25rem;
    color: var(--text-main);
+   font-size: 1.125rem;
+   font-weight: 400;
+   text-transform: capitalize;
 }
 .row {
    margin-bottom: 4rem;

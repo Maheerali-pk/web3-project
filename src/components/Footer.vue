@@ -50,7 +50,7 @@
    font-family: Kanit;
    font-size: inherit;
    font-weight: 500;
-   max-width: 37.5rem;
+   max-width: 34.75rem;
    display: flex;
    flex-direction: row;
    -moz-box-align: center;
@@ -91,6 +91,7 @@
    font-size: 0.6875rem;
    font-weight: 400;
    color: var(--text-main);
+   text-transform: capitalize;
 }
 .follow-us {
    margin-bottom: 0.8125rem;

@@ -28,9 +28,8 @@ export default defineComponent({
       <div class="card-title">Connect Wallet</div>
       <br />
       <div class="paragraph">
-         Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, nesciunt quam. Laudantium, eveniet odio itaque
-         iusto eos laboriosam beatae, repellat nisi earum deserunt natus quos, dolorum temporibus optio excepturi
-         voluptatem.
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+         magna aliqua.
       </div>
       <div class="icons-wrapper">
          <img @click="connectMetaMask()" src="../assets/Images/popup-icons/Group3.png" alt="" />

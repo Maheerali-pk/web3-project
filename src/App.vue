@@ -81,9 +81,8 @@ export default defineComponent({
    height: 100%;
    width: 100%;
    background-color: var(--background-main);
-   background-size: contain;
    background-image: url("./assets/background.png");
-   background-position-y: 15rem;
+   background-position-y: 13.5625rem;
    background-repeat: no-repeat;
    transition: all 0.15s ease-in-out;
 }

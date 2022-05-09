@@ -73,7 +73,7 @@ import Footer from "../components/Footer.vue";
 }
 .inputs {
    display: grid;
-   grid-template-columns: auto 5rem 9rem 9rem 5rem;
+   grid-template-columns: auto 5rem 10rem 10rem 5rem;
    gap: 1rem;
 
    width: 100%;
