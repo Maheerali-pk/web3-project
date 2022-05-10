@@ -2,9 +2,16 @@
 import Header from "../components/Header.vue";
 import Footer from "../components/Footer.vue";
 import { defineComponent } from "vue";
+import Dropdown from "@/components/Dropdown.vue";
 export default defineComponent({
+   data() {
+      return {
+         image1: require("../assets/Images/select-images/eth.png"),
+         image2: require("../assets/Images/select-images/ibz.png"),
+      };
+   },
    methods: { onClickMax: () => console.log("Max clicked") },
-   components: { Header, Footer },
+   components: { Header, Footer, Dropdown },
 });
 </script>
 <template>
@@ -12,15 +19,18 @@ export default defineComponent({
       <Header></Header>
       <div class="card-wrapper">
          <div class="card-title">Swap</div>
+         <div class="input-label">From</div>
          <div class="inputs">
-            <div class="input-wrapper">
-               <div class="input-label">From</div>
-               <input class="input" />
-            </div>
-            <div class="input-wrapper">
-               <div class="input-label"></div>
-               <input class="input" placeholder="0" />
-            </div>
+            <Dropdown
+               :params="{
+                  options: [
+                     { img: image1, text: 'ETH', value: 'eth' },
+                     { img: image2, text: 'IBZ', value: 'ibz' },
+                  ],
+                  selected: 'eth',
+               }"
+            ></Dropdown>
+            <input class="input" placeholder="0" />
          </div>
          <div class="max cursor-pointer" @click="onClickMax">Max</div>
          <div class="icons-row">
@@ -45,15 +55,18 @@ export default defineComponent({
                <div class="add-a-send">Add A Send (Optional)</div>
             </div>
          </div>
+         <div class="input-label">To</div>
          <div class="inputs">
-            <div class="input-wrapper">
-               <div class="input-label">To</div>
-               <input class="input" />
-            </div>
-            <div class="input-wrapper">
-               <div class="input-label"></div>
-               <input class="input" placeholder="0" />
-            </div>
+            <Dropdown
+               :params="{
+                  options: [
+                     { img: image1, text: 'ETH', value: 'eth' },
+                     { img: image2, text: 'IBZ', value: 'ibz' },
+                  ],
+                  selected: 'ibz',
+               }"
+            ></Dropdown>
+            <input class="input" placeholder="0" />
          </div>
          <div class="d-flex justify-center w-100">
             <button class="connect-button">Connect Wallet</button>
@@ -124,7 +137,6 @@ export default defineComponent({
    grid-template-columns: 20% 80%;
    gap: 0.55rem;
    width: 100%;
-   align-items: end;
 }
 .input-wrapper {
    display: flex;
@@ -145,6 +157,7 @@ export default defineComponent({
 .input-label {
    font-weight: 400;
    font-size: 1.125rem;
+   margin-bottom: 0.5rem;
    color: var(--text-main);
 }
 </style>

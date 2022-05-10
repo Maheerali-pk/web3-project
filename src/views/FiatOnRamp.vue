@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import Header from "../components/Header.vue";
 import Footer from "../components/Footer.vue";
+import Dropdown from "@/components/Dropdown.vue";
+const image1 = require("../assets/Images/select-images/eur.png");
+const image2 = require("../assets/Images/select-images/usdc.png");
 </script>
 <template>
    <div class="page-wrapper">
@@ -10,17 +13,30 @@ import Footer from "../components/Footer.vue";
          <div class="subheading">Select Currency And Payment Method</div>
          <div class="input-label">Currency</div>
          <div class="inputs">
-            <select>
-               <option value="USD">USD</option>
-               <option value="EUR">EUR</option>
-            </select>
+            <Dropdown
+               :params="{
+                  options: [
+                     { img: image1, text: 'EUR', value: 'eur' },
+                     { img: image2, text: 'USDC', value: 'usdc' },
+                  ],
+                  selected: 'eur',
+               }"
+            ></Dropdown>
             <input placeholder="0" class="input" />
          </div>
          <div class="purchase-details subheading">Purchase Details</div>
 
          <div class="input-label">About Estimated</div>
          <div class="inputs">
-            <input class="input" />
+            <Dropdown
+               :params="{
+                  options: [
+                     { img: image1, text: 'EUR', value: 'eur' },
+                     { img: image2, text: 'USDC', value: 'usdc' },
+                  ],
+                  selected: 'usdc',
+               }"
+            ></Dropdown>
             <input placeholder="0" class="input" />
          </div>
          <div class="card-footer">
