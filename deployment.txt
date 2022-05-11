@@ -1,0 +1,7 @@
+1) Create a heroku account
+2) Create an app of heroku
+3) Then initialize git repo in your project base directory.
+4) Then login into heroku using "heroku login -i"
+5) Then add remote to that project using "heroku git:remote -a <app-name>"
+6) Then use git push heroku master
+
